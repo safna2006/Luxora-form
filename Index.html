@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luxora Digital – Product Inquiry Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 450px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    input[type="file"] {
+      padding: 5px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background: black;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Product Inquiry – Luxora Digital</h2>
+  <form action="YOUR_FORM_HANDLER_URL" method="POST" enctype="multipart/form-data">
+    
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select...</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="product">Product Name</label>
+    <input type="text" id="product" name="product" placeholder="E.g. LV Sling Bag" required>
+
+    <label for="contact">Contact Number</label>
+    <input type="tel" id="contact" name="contact" placeholder="+91-XXXXXXXXXX" required>
+
+    <label for="image">Upload Product Image (Optional)</label>
+    <input type="file" id="image" name="product_image" accept="image/*">
+
+    <button type="submit">Submit Inquiry</button>
+  </form>
+</div>
+
+</body>
+</html>
